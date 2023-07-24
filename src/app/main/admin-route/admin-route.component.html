@@ -1,0 +1,89 @@
+<section class="contact">
+    
+    <div class="forms">
+        <form [formGroup]="postForm" (ngSubmit)="onAddPostSubmit()">
+          <h2>ADMIN ONLY</h2>
+           <div class="one">
+              <div class="first">
+                    <label for="first">Title Name</label>
+                    <input class="input " type="text" placeholder="Please enter title" formControlName="title"
+                    [ngClass]="{'isvalid': (postForm.get('title').touched || postForm.get('title').dirty)
+                    && !postForm.get('title').valid }">
+                   <span>
+                    <span class="isInvalid" *ngIf="postForm.get('title').errors?.['required']
+                    && postForm.get('title').touched">
+                         title must be valid
+                    </span>
+                    <span class="isInvalid" *ngIf="postForm.get('title').errors?.['minlength']">
+                        title must contain a minimun of 4 characters
+                    </span>
+               </span>
+               </div>
+               
+               <div class="second">
+                    <label for="first">categoryId</label>
+                    <input class="input " type="text" placeholder="Please categoryId enter name" formControlName="categoryId"
+                    [ngClass]="{'isvalid': (postForm.get('categoryId').touched || postForm.get('categoryId').dirty)
+                    && !postForm.get('categoryId').valid }">
+                    <span>
+                        <span class="isInvalid" *ngIf="postForm.get('categoryId').errors?.['required']
+                        && postForm.get('categoryId').touched">
+                             categoryId must be valid
+                        </span>
+                        <span class="isInvalid" *ngIf="postForm.get('categoryId').errors?.['minlength']">
+                            categoryId must contain a minimun of 4 characters
+                        </span>
+                   </span>
+               </div>
+            
+           </div>
+         
+          
+           
+           <div class="second">
+                <label for="first">Price</label>
+                <input class="input " type="text" placeholder="Please enter price" formControlName="price"
+                [ngClass]="{'isvalid': (postForm.get('price').touched || postForm.get('price').dirty)
+                && !postForm.get('price').valid }">
+                <span>
+                    <span class="isInvalid" *ngIf="postForm.get('price').errors?.['required']
+                    && postForm.get('price').touched">
+                         price must be valid
+                    </span>
+                    <span class="isInvalid" *ngIf="postForm.get('price').errors?.['minlength']">
+                        price must contain a minimun of 2 characters
+                    </span>
+               </span>
+           </div>
+           <div class="second">
+                <label for="first">techStack</label>
+                <input class="input " type="text" placeholder="Please enter price" formControlName="techStack"
+                [ngClass]="{'isvalid': (postForm.get('techStack').touched || postForm.get('techStack').dirty)
+                    && !postForm.get('techStack').valid }">
+                    <span>
+                        <span class="isInvalid" *ngIf="postForm.get('techStack').errors?.['required']
+                        && postForm.get('techStack').touched">
+                             techStack must be valid
+                        </span>
+                        <span class="isInvalid" *ngIf="postForm.get('techStack').errors?.['minlength']">
+                            techStack must contain a minimun of 3 characters
+                        </span>
+                   </span>
+           </div>
+
+           
+           <div class="fourth second">
+                <label for="first">Description</label>
+                <textarea name="good" id="first" cols="30" rows="10" placeholder="Description" formControlName="description"></textarea>
+           </div>
+
+        
+             <div class="inline">
+                <button class="btn" 
+                [title]="postForm.valid ? 'save your entered values' : 'disabled untill form data is valid' "
+                 [disabled]="!postForm.valid" type="submit">Submit</button>
+                 <button (click)="populateTestData()" class="btn">SetValue</button>
+             </div>
+        </form>
+    </div>
+</section>

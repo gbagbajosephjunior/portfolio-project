@@ -1,0 +1,124 @@
+
+<div class="navigation" appScrollY>
+    <input type="checkbox" class="navigation-checkbox" id="navi-toggle">
+    <label for="navi-toggle" class="navigation-button">
+        <span class="navigation-icon">
+
+        </span>
+    </label>
+    <div class="navigation-background">&nbsp;</div>
+    
+    <nav class="navigation-nav">
+       
+        <img src="../../../assets/IMG_20220828_132543_578.jpg" alt="barns">
+        <ul class="navigation-list">
+            <div class="login">
+                <a class="login-anchor" [routerLink]="['/login']" routerLinkActive="active">Login</a>
+                <a  [routerLink]="['/register']" routerLinkActive="active">Register</a>
+            </div>
+    
+            <li class="navigation-item">
+                <a style="font-size: 1rem; margin: 0;" [routerLink]="['/Admin']" routerLinkActive="active" class="navigation-link">Guarded Route Admin Only</a>
+            </li>
+            <li class="navigation-item">
+                <a [routerLink]="['/']" routerLinkActive="active" class="navigation-link"></a>
+            </li>
+            <li class="navigation-item">
+                <a [routerLink]="['/home']" routerLinkActive="active" class="navigation-link">Home</a>
+            </li>
+            <li class="navigation-item">
+                <a [routerLink]="['/about']" routerLinkActive="active" class="navigation-link">about</a>
+            </li>
+            <li class="navigation-item">
+                <a [routerLink]="['/services']" routerLinkActive="active"class="navigation-link">Services</a>
+            </li>
+            <li class="navigation-item">
+                <a [routerLink]="['/projects']" routerLinkActive="active" class="navigation-link">portfolio</a>
+            </li>
+            <li class="navigation-item">
+                <a  [routerLink]="['/contacts']" routerLinkActive="active"class="navigation-link">contact</a>
+            </li>
+            
+            <div class="navigation-diff">
+                <li class="navigation-item">
+                    <a  [routerLink]="['/home']" routerLinkActive="active"class="diff"><i>barnsdooga@gmail.com</i></a>
+                </li>
+                <li class="navigation-item">
+                    <a  [routerLink]="['/home']" routerLinkActive="active"class="diff"><address>+234-91-5402-7508</address></a>
+                </li>
+                <li class="navigation-item">
+                    <a  [routerLink]="['/home']" routerLinkActive="active"class="diff"><address>+234-91-6295-5206</address></a>
+                </li>
+               
+            </div>
+        </ul>
+    </nav>
+
+</div>
+
+<header class="header" appScrollY>
+   
+    <a class="logo">Saint Barns</a>
+    <ul class="helper">
+            
+        <li (click)="tiv('language')"><a href="javascript:void(0)" routerLinkActive="active"><span class="spans"><i class="fa fa-caret-down"></i></span></a>
+           <div class="dropdown" *ngIf="id === 'language'">
+               
+               <h6>languages fluent in</h6>
+               <ul>
+                   <li>
+                       English 90%
+                   </li>
+                   <li>
+                    Tiv 100%
+                   </li>
+                   <li>
+                    Nigerian pigin 70%
+                   </li>
+               </ul>
+           </div>
+        </li>
+    </ul>    
+   <nav class="navbar language">
+           <ul class="helped">
+            
+            <li (click)="tiv('language')"><a href="javascript:void(0)" routerLinkActive="active">language<span class="spans"><i class="fa fa-caret-down"></i></span></a>
+               <div class="dropdown" *ngIf="id === 'language'">
+                   
+                   <h6>languages fluent in</h6>
+                   <ul>
+                       <li>
+                           English 90%
+                       </li>
+                       <li>
+                        Tiv 100%
+                       </li>
+                       <li>
+                        Nigerian pigin 70%
+                       </li>
+                   </ul>
+               </div>
+            </li>
+            <li><a [routerLink]="['/Admin']" routerLinkActive="active">Guarded</a><li>
+            <li><a [routerLink]="['/']" routerLinkActive="active"></a></li>
+            <li><a [routerLink]="['/home']" routerLinkActive="active">Home</a></li>
+            <li><a [routerLink]="['/about']" routerLinkActive="active">About</a></li>
+            <li><a [routerLink]="['/services']" routerLinkActive="active">Services</a></li>
+            <li><a [routerLink]="['/projects']" routerLinkActive="active">Portfolio</a></li>
+            <li style="border-right: 2px solid blueviolet; height: 100%;"><a [routerLink]="['/contacts']" routerLinkActive="active">Contact</a></li>
+           </ul>
+        </nav>
+        <span class="spanish"></span>
+        <div class="login">
+            <a style="margin-right: 1rem;" *ngIf="isLogedIn">welcome:{{userName}}</a>
+            <a class="login-anchor" *ngIf="!isLogedIn" [routerLink]="['/login']" routerLinkActive="active">Login<i class="fa fa-arrow-circle-o-down" aria-hidden="true"></i>
+            </a>
+            <a class="login-anchor" style="cursor: pointer;" *ngIf="isLogedIn" (click)="logOut()" routerLinkActive="active">logout<i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i>
+            </a>
+            
+            <a  [routerLink]="['/register']" routerLinkActive="active">Register<i class="fa-solid fa-house"></i></a>
+        </div>
+
+        <!-- <div class="bx bx-moon" id="darkMode-Icon"><i class="fa-light fa-moon"></i>
+        </div> -->
+</header>

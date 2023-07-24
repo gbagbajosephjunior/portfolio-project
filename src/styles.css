@@ -1,0 +1,93 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* @import Url('http..../googlefontsetc.'); */
+
+*,
+::before,
+::after{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    /* font-family: poppins sans-serif; */
+}
+
+:root{
+    --bg-color: #fdfdfd;
+    --text-color: #333;
+    --main-color: #754ef9;
+    --white-color: #fdfdfd;
+    --shadow-color: rgba(0,0,0, .2);
+    --border: 1px solid rgb(7, 143, 7);
+
+    /* nav */
+    --color-primary-primary: #55c57a;
+    --color-primary-light: #7ed56f;
+    --color-primary-dark: #28b485;
+    --color-gray-dark: #777;
+    --color-black: #000;
+    --color-white: #fff;
+
+    /* --bar-width: 60px;
+    --bar-height: 8px;
+    --hamburger-gap: 6px;
+    --foreground: #333;
+    --background: white;
+    --hamburger-margin: 5px;
+    --animation-timing: 200ms ease-in-out;
+    --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2); */
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body{
+    background-color: var(--white-color);
+    color: var(--text-color);
+}
+
+
+.btn{
+    display: inline-block;
+    border-radius: .6rem;
+    background-color: var(--main-color);
+    padding: 1.2rem 2.8rem;
+    box-shadow: 0 .2rem .5rem var(--shadow-color);
+    font-size: 1.6rem;
+    letter-spacing: .2;
+    color: var(--white-color);
+    border: .2rem solid transparent;
+    transition: .5s ease;
+}
+
+.btn:hover{
+    background-color: transparent;
+    color: var(--main-color);
+    border: .2rem solid var(--main-color);
+}
+
+.navbar a.active::before{
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 100%;
+    height: .2rem;
+    background-color: green
+    }
+
+    .isvalid{
+        border: 1px solid red;
+        
+    }
+
+    .isInvalid{
+        font-size: 1.6rem;
+        color: red;
+        /* text-transform: capitalize; */
+    }

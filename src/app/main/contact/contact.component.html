@@ -1,0 +1,71 @@
+<section class="contact">
+    
+    <div class="forms">
+        <form [formGroup]="customerForm" (ngSubmit)="onAddPostSubmit()">
+          <h2>Contact <span>Me</span></h2>
+           <div class="one">
+              <div class="first">
+                    <label for="first">First Name</label>
+                    <input class="input " type="text" placeholder="Please enter first name" formControlName="firstName"
+                    [ngClass]="{'isvalid': firstNametype }">
+               </div>
+               <span class="isInvalid">{{firstNametype}}</span>
+               <div class="second">
+                    <label for="first">Last Name</label>
+                    <input class="input " type="tel" placeholder="Please enter last name" formControlName="lastName"
+                    [ngClass]="{'isvalid': lastNametype }">
+               </div>
+               <span class="isInvalid">{{lastNametype}}</span>
+           </div>
+           <div class="third" formGroupName="emailGroup">
+               <div class="second">
+                    <label for="emailId">Email</label>
+                    <input class="input " type="email" placeholder="Please enter email address" formControlName="email" id="emailId"
+                    [ngClass]="{'isvalid': emailMessage}">
+                    <span class="isInvalid">{{emailMessage}}</span>
+               </div>
+               <div class="second">
+                    <label for="confirmEmailId">Confirm Email</label>
+                    <input class="input " type="email" placeholder="Please confirm email address" formControlName="confirmEmail" id="confirmEmailId"
+                    [ngClass]="{'isvalid': customerForm.get('emailGroup').errors || ((customerForm.get('emailGroup.confirmEmail').touched || customerForm.get('emailGroup.confirmEmail').dirty)
+                    && !customerForm.get('emailGroup.confirmEmail').valid)}"> 
+               </div>
+           </div>
+           <div class="second">
+                <label for="first">City</label>
+                <input class="input " type="text" placeholder="Please enter city/country" formControlName="city"
+                [ngClass]="{'isvalid': rangeType}">
+                
+           </div>
+           <span class="isInvalid">{{rangeType}}</span>
+           
+           <div class="second">
+                <label for="first">Rating(scale of 1 - 5)</label>
+                <input class="input " type="number" placeholder="Please rate my portfolio website" formControlName="rating"
+                [ngClass]="{'isvalid': (customerForm.get('rating').touched || customerForm.get('rating').dirty)
+                && !customerForm.get('rating').valid}"> 
+           </div>
+           <div class="fourth second">
+                <label for="first">message</label>
+                <textarea name="good" id="first" cols="30" rows="10" placeholder="Message" formControlName="message"></textarea>
+           </div>
+           
+         <div formArrayName="tags">
+          <div class="second"  *ngFor="let tag of tags.controls; let i=index">
+               <label [attr.for]="i">Added form field</label>
+               <div class="div">
+                    <input class="input" id="i" type="text" placeholder="any other information" formControlName="tags">
+               </div>
+               <button type="button" class="btn-2" (click)="deleteTag(i)">Delete tag</button>
+          </div>
+          <button type="button" class="btn btn-tag" (click)="addTag()">Add tag</button>
+         </div>
+             <div class="inline">
+                <button class="btn" 
+                [title]="customerForm.valid ? 'save your entered values' : 'disabled untill form data is valid' "
+                 [disabled]="!customerForm.valid" type="submit">Submit</button>
+             </div>
+
+        </form>
+    </div>
+</section>

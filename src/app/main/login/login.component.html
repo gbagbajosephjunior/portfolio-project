@@ -1,0 +1,84 @@
+<section class="contact">
+    
+    <div class="forms">
+         
+        <form (ngSubmit)="save()" [formGroup]="customerForm">
+          <h2>LOGIN</h2>
+          <h3 style="text-align: center; margin: 2rem 0 1rem 0; font-size: 1.2rem; line-height: 1.6;">THIS DOES NOT REQUIRE YOU TO REGISTER, <br> PLEASE LOGIN WITH ANY CREDENTIALS</h3>
+              <div class="first">
+                    <label for="first">First Name</label>
+                    <input type="text" placeholder="Please enter lirst name" formControlName="firstName"
+                    [ngClass]="{'isvalid': (customerForm.get('firstName').touched || customerForm.get('firstName').dirty)
+                     && !customerForm.get('firstName').valid }">
+                    <span>
+                         <span class="isInvalid" *ngIf="customerForm.get('firstName').errors?.['required'] 
+                         && customerForm.get('firstName').touched">
+                              please enter your first name
+                         </span>
+                         <span class="isInvalid" *ngIf="customerForm.get('firstName').errors?.['minlength']">
+                              first name must be longer than 2 characters
+                         </span>
+                    </span>
+               </div>
+               <div class="second">
+                    <label for="first">Last Name</label>
+                    <input type="tel" placeholder="Please enter last name" formControlName="lastName"
+                    [ngClass]="{'isvalid': (customerForm.get('lastName').touched || customerForm.get('lastName').dirty)
+                     && !customerForm.get('lastName').valid }">
+                     <span>
+                         <span class="isInvalid" *ngIf="customerForm.get('lastName').errors?.['required']
+                         && customerForm.get('lastName').touched">
+                              please enter your last name
+                         </span>
+                         <span class="isInvalid" *ngIf="customerForm.get('lastName').errors?.['minlength']">
+                              firstName must be longer than 2 characters
+                         </span>
+                    </span>
+               </div>
+           
+           <div class="third">
+               <div class="second">
+                    <label for="first">Email</label>
+                    <input type="email" placeholder="Please enter email address" formControlName="email" 
+                    [ngClass]="{'isvalid': (customerForm.get('email').touched || customerForm.get('email').dirty)
+                    && !customerForm.get('email').valid }">
+                    <span>
+                         <span class="isInvalid" *ngIf="customerForm.get('email').errors?.['required']
+                         && customerForm.get('email').touched">
+                              email must be required
+                         </span>
+                    </span>
+               </div>
+           </div>
+           <div class="second">
+                <label for="first">password</label>
+                <input type="text" placeholder="*****" formControlName="password" 
+                [ngClass]="{'isvalid': (customerForm.get('password').touched || customerForm.get('password').dirty)
+                && !customerForm.get('password').valid }">
+
+                    <span>
+                         <span class="isInvalid" *ngIf="customerForm.get('password').errors?.['required']
+                         && customerForm.get('password').touched">
+                              password must be valid
+                         </span>
+                         <span class="isInvalid" *ngIf="customerForm.get('password').errors?.['minlength']">
+                             password must contain a minimun of four characters
+                         </span>
+                    </span>
+              
+           </div>
+             <div class="inline">
+                <button class="btn" type="submit" 
+                [title]="customerForm.valid ? 'save your entered values' : 'disabled untill form data is valid' "
+                [disabled]="!customerForm.valid">Login</button>
+                <button class="btn" type="button" (click)="populateTestData()">Set Value</button>
+                <button class="btn" type="button" (click)="populate()">patch Value</button>
+             </div>
+             <p>i don't have an account</p>
+             <a class="btn-2" routerLink="/register">Sign-up</a>
+             <button class="btn-2">Forgot password</button>
+        </form>
+    </div>
+    <span>
+</span>
+</section>

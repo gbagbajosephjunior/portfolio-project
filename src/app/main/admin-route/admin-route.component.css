@@ -1,0 +1,142 @@
+.contact{
+    margin-top: 10rem;
+    }
+    
+    .contact h2{
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--main-color);
+    font-size: 3.2rem;
+    }
+    
+    .contact form{
+    background-color: rgb(233, 245, 233);
+    width: 50%;
+    margin: 2rem auto;
+    padding: 3rem;
+    box-shadow: 0 .1rem .8rem var(--shadow-color);
+    }
+    .contact form .input{
+    
+    width: 100%;
+    padding: 1rem;
+    border-radius: 5px;
+    background: var(--white-color);
+    box-shadow: 0 .1rem .8rem var(--shadow-color);
+    }
+    
+    .btn-2{
+    margin: 1rem 0rem 0rem 0;
+    cursor: pointer;
+    font-size: 1.2rem;
+    color:var(--color-black);
+    padding: .4rem;
+    border-bottom: var(--border);
+    }
+    
+    label{
+    font-size: 1.6rem;
+    }
+    .contact form textarea{
+    width: 100%;
+    padding: 1rem;
+    border-radius: 5px;
+    background: var(--white-color);
+    box-shadow: 0 .1rem .8rem var(--shadow-color);
+    resize: none;
+    }
+    .contact form .third{
+    margin-bottom: 1rem;
+    }
+    .contact form .one{
+    display: flex;
+    gap: 1rem;
+    }
+    .contact form .one .first{
+    width: 50%;
+    margin-bottom: 1rem;
+    }
+    .contact form .one .second{
+    width: 50%;
+    }
+    
+    form .second{
+    margin-top: 1rem;
+    }
+    
+    .btn{
+    margin: 1rem .5rem 1rem 0;
+    cursor: pointer;
+    }
+    
+    
+    
+    /* media queries */
+    
+    /* 1 em = 16px
+    therefore if 1 em = 16px
+    divide the device breakpoint by 16px
+    
+    eg. 320px/16px
+    */
+    
+    @media screen and (min-width: 20em){
+    .contact{
+    margin-top: 9rem;
+    }
+    .contact form{
+    background-color: rgb(233, 245, 233);
+    width: 90%;
+    margin: 2rem auto;
+    padding: 1rem;
+    box-shadow: 0 .1rem .8rem var(--shadow-color);
+    }
+    .contact h2{
+    font-size: 2rem;
+    }
+    .btn{
+    padding: 1rem 1.5rem;
+    }
+    .contact form .one{
+    display: block;
+    gap: 1rem;
+    }
+    .contact form .one .first{
+    width: 100%;
+    margin-bottom: 1rem;
+    }
+    .contact form .one .second{
+    width: 100%;
+    }
+    }
+    
+    @media screen and (min-width: 75em){
+    .contact{
+    margin-top: 10rem;
+    }
+    .contact form{
+    background-color: rgb(233, 245, 233);
+    width: 60%;
+    margin: 2rem auto;
+    padding: 3rem;
+    box-shadow: 0 .1rem .8rem var(--shadow-color);
+    }
+    .contact h2{
+    font-size: 2rem;
+    }
+    
+    form p{
+    font-size: 1.5em;
+    margin-bottom: 1.2rem;
+    }
+    
+    .contact form .input{
+    margin: 0rem 0;
+    }
+    
+    .btn{
+    margin: 2rem .5rem 1rem 0;
+    cursor: pointer;
+    }
+    
+    }

@@ -1,0 +1,29 @@
+.downlode{
+background: var(--bg-color);
+box-shadow: 0 0 0.5rem .7rem var(--shadow-color);
+width: 70%;
+min-height: 30vh;
+margin: 20rem auto;
+display: flex;
+flex-direction: column;
+align-items: center;
+padding-top: 5rem;
+}
+
+.downlode p{
+font-size: 2rem;
+line-height: 2;
+}
+
+.downlode .btn{
+margin: 1rem 0;
+padding: 1rem .5rem;
+}
+
+@media only screen  and (min-width: 20em){
+    .downlode{
+        width: 90%;
+        margin: 10rem auto;
+        padding: 1rem;
+    }
+}

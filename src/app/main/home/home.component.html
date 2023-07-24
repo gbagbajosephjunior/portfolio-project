@@ -1,0 +1,116 @@
+<section class="home" id="home">
+    <div class="home-content">
+        <h3>Hello I am</h3>
+        <h1>DOOGA MOUGH BARNABAS</h1>
+        <p>I'm a frontend software developer with experience in building
+             highly responsive web application with ANGULAR</p>
+        <div class="social-media">
+            <a href="https://www.facebook.com/dooga.moughbarnabas" class="social-media"><i class="fa fa-facebook" aria-hidden="true"></i>
+            </a>
+            <a href="#" class="social-media"><i class="fa fa-whatsapp" aria-hidden="true"></i>
+            </a>
+            <a href="https://www.instagram.com/moughbarnabas/?igshid=YmMyMTA2M2Y%3D" class="social-media"><i class="fa fa-instagram" aria-hidden="true"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/mough-dooga-20bb4222a" class="social-media"><i class="fa fa-linkedin" aria-hidden="true"></i> </a>
+            <a href="https://github.com/BarnsDoogaM?tab=repositories" class="social-media"><i class="fa fa-github" aria-hidden="true"></i>
+            </a>
+        </div>
+        <div class="flex">
+            <a [routerLink]="['/downlode']" href="#" class="btn">Downlode CV <span><i class="fa fa-arrow-down" aria-hidden="true"></i></span></a>
+            <a [routerLink]="['/resume']" class="btn btn-resume">RESUME</a>
+        </div>
+    </div>
+    
+    <div class="profession-container">
+        <div class="profession-box">
+            <div class="profession" style="--i:0;">
+                <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                <h3>Web developer</h3>
+            </div>
+            <div class="profession" style="--i:1;">
+                <i class="fa fa-desktop" aria-hidden="true"></i>
+
+                <h3>Web designer</h3>
+            </div>
+            <div class="profession" style="--i:2;">
+                <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                <h3>developer</h3>
+            </div>
+            <div class="profession" style="--i:3;">
+                <i class="fa fa-desktop" aria-hidden="true"></i>
+
+                <h3>designer</h3>
+            </div>
+
+            <div class="circle"></div>
+        </div>
+        <div class="overlay"></div>
+    </div>
+    <div class="home-image">
+        <img src="../../../assets/portfolio image.jpg" alt="Barns">
+    </div>
+    
+</section>
+<section class="table">
+    <div class="search">
+        <input type="text" placeholder="Search..."><span>|</span><i class="fa fa-search" aria-hidden="true"></i>
+    </div>
+    <div class="tabled">
+        
+        <h1>data retrived from the backend transformed and displayed on the web page using Rxjs</h1>
+        <!-- <select class="select">
+            <option>select post by category</option>
+            <option>dooga</option>
+            <option>paul</option>
+        </select> -->
+        <div class="problem">
+            
+            <table *ngIf="posts$ | async as posts">
+                <thead>
+                    <th>Title</th>
+                    <th>price</th>
+                    <th> techStack</th>
+                    <th>categoryId</th>
+                    <th>Description</th>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let post of posts"> 
+                       
+                        <td>{{post.title}}</td>
+                        <td>{{post.price | currency: "USD":"symbol":"1.2-2"}}</td>
+                        <td>{{post.techStack}}</td>
+                        <td>{{post.categoryName}}</td>
+                        <td>{{post.description}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>    
+    <h1 style="font-size: 2rem; margin-top: 2rem;">categories</h1>
+            <table *ngIf="category$ | async as categories">
+                <thead>
+                    <th>Title</th>
+                    <th>price</th>
+                    <th> techStack</th>
+                    <th>categoryId</th>
+                    <th>Description</th>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let category of categories"> 
+                       
+                        <td>{{category.title}}</td>
+                        <td>{{category.price | currency: "USD":"symbol":"1.2-2"}}</td>
+                        <td>{{category.techStack}}</td>
+                        <td>{{category.categoryId}}</td>
+                        <td>{{category.description}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        
+    
+    <app-categories></app-categories>
+</section>
+<div class="footer">
+    <app-footer></app-footer>
+</div>
+

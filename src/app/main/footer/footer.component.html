@@ -1,0 +1,19 @@
+<div class="footer">
+    
+        <p> Copyright &copy; 2023 by Barns | all rights Reseved </p>
+   
+    <div class="search">
+        <form [formGroup]="postForm" (ngSubmit)="onAddPostSubmit()">
+            <input type="email" placeholder="Email address.." formControlName="email"
+            [ngClass]="{'isvalid': (postForm.get('email').touched || postForm.get('email').dirty)
+                    && !postForm.get('email').valid }">     
+            <button 
+            [title]="postForm.valid ? 'form is valid send it to the developer' : 'please fill in a valid email' "
+            [disabled]="!postForm.valid" type="submit" class="botton">Subscribe</button>
+        </form>
+        <br>
+        
+    </div>
+    
+</div>
+

@@ -1,0 +1,64 @@
+<section class="contact">
+    
+    <div class="forms">
+        <form (ngSubmit)="save()" [formGroup]="customerForm">
+          <h2>SIGN-UP</h2>
+              <div class="first">
+                    <label for="first">First Name</label>
+                    <input class="input" type="text" placeholder="Please enter your first name" formControlName="firstName" 
+                    [ngClass]="{'isvalid': (customerForm.get('firstName').touched || customerForm.get('firstName').dirty)
+                    && !customerForm.get('firstName').valid }">
+                    
+               </div>
+               <div class="second">
+                    <label for="first">Last Name</label>
+                    <input class="input" type="tel" placeholder="Please enter your last name" formControlName="lastName">
+               </div>
+           
+          
+               <div class="second">
+                    <label for="first">Email</label>
+                    <input class="input" type="email" placeholder="Please enter your email address" formControlName="email">
+               </div>
+          
+           <div class="second">
+                <label for="first">Password</label>
+                <input class="input" type="number" placeholder="******" formControlName="password">
+           </div>
+
+           
+           <div class="second">
+               <label for="first">Phone</label>
+               <input class="input" type="number" placeholder="Please enter your phone number" formControlName="phone"
+               [ngClass]="{'isvalid': (customerForm.get('phone').touched || customerForm.get('phone').dirty)
+                    && !customerForm.get('phone').valid }">
+          </div>
+          <p class="para">Nofity me via any of the two of your willingness to work with me</p> <br>
+           <div class="validation second">
+               
+               <div class="noti">
+                    <input class="phone" type="radio" formControlName="notification" value="text"
+                   >
+                   <!-- (click)="setNotification('text')" -->
+                    <label for="form-check-input">Text Me</label>
+               </div>
+               
+                <div class="notification">
+                    <input class="email" type="radio" formControlName="notification" value="email"
+                    >
+                    <!-- (click)="setNotification('email')" -->
+                    <label for="form-check-input">Email</label>
+                    
+               </div>
+           </div>
+           
+             <div class="inline">
+                <button class="btn" type="submit"
+                [title]="customerForm.valid ? 'save your entered values' : 'disabled untill form data is valid' "
+                [disabled]="!customerForm.valid">Register</button>
+             </div>
+             <p class="p">i have an account</p>
+             <a class="btn-2" routerLink="/login">Login</a>
+        </form>
+    </div>
+</section>

@@ -1,0 +1,154 @@
+.projects{
+background-color: var(--bg-color);
+margin-top: 15rem;
+}
+
+.projects h1, h2{
+text-align: center;
+font-size: 2.5rem;
+}
+.projects h2{
+text-align: center;
+font-size: 2.5rem;
+margin: 2rem;
+}
+.projects h1, h2{
+text-align: center;
+font-size: 2.5rem;
+}
+
+.projects .projects-container{
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+margin-top: 2rem;
+align-items: center;
+}
+.projects .projects-container .project-1 .class{
+background-color: black;
+width: 100%;
+
+}
+
+.project-1{
+width: 20%;
+padding: 1rem;
+border: 1px solid;
+margin: 1rem;
+border-radius: 16px;
+box-shadow: 0 1rem 1rem rgba(0, 0, 0, .2);
+transition: .5s ease;
+background: linear-gradient(green);
+position: relative;
+}
+
+.project-1 .layer{
+position: absolute;
+top: 5rem;
+left: 2rem;
+z-index: 1200;
+}
+
+.project-1:hover{
+transform: scale(1.03);
+}
+
+
+.project-1 img{
+width: 100%;
+aspect-ratio: 3/2;
+object-fit: contain;
+}
+
+.project-1 .botton{
+margin-top: 1rem;
+display: inline-block;
+border-radius: .6rem;
+color: var(--main-color);
+padding: 1rem 1.5rem;
+box-shadow: 0 .2rem .5rem var(--shadow-color);
+font-size: 1.6rem;
+letter-spacing: .2;
+color: var(--white-color);
+border: .2rem solid transparent;
+transition: .5s ease;
+background-color: var(--main-color);
+}
+
+.project-1 .rice{
+margin-left: 4rem;
+}
+.project-1 .bread{
+margin-left: 4rem;
+}
+
+@media screen and (min-width: 20em){
+.projects{
+margin: 7rem 0rem; 
+
+}
+
+.projects h1{
+font-size: 2rem;
+}
+.projects h2{
+font-size: 1.5rem;
+}
+.project-1{
+width: 100%;
+border: 1px solid green;   
+
+}  
+}
+@media screen and (min-width: 30em){
+.projects{
+margin: 7rem 1rem 0 1rem; 
+}
+
+.projects h1{
+font-size: 2rem;
+}
+.projects h2{
+font-size: 1.5rem;
+}
+.project-1{
+width: 100%;
+
+}  
+}
+@media screen and (min-width: 48em){
+
+.project-1{
+width: 30%;
+
+}  
+}
+
+@media screen and (min-width: 64em){
+.project-1{
+width: 30%;
+
+}  
+}
+
+@media screen and (min-width: 75em){
+.projects{
+margin: 10rem 3rem 0 3rem; 
+}
+.projects .projects-container{
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+margin-top: 2rem;
+align-items: center;
+}
+.project-1{
+width: 20%;
+
+}
+.project-1 .botton{
+    
+    font-size: 1.3rem;
+    letter-spacing: 0;
+    }  
+}
