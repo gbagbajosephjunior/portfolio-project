@@ -21,6 +21,7 @@
     "@fortawesome/fontawesome-svg-core": "^6.1.1",
     "@fortawesome/free-solid-svg-icons": "^6.1.1",
     "angular-in-memory-web-api": "^0.16.0",
+    "cypress": "^13.6.1",
     "font-awesome": "^4.7.0",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",

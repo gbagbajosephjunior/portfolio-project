@@ -1,7 +1,7 @@
 
 <div class="navigation" appScrollY>
     <input type="checkbox" class="navigation-checkbox" id="navi-toggle">
-    <label for="navi-toggle" class="navigation-button">
+    <label data-cy="label" for="navi-toggle" class="navigation-button">
         <span class="navigation-icon">
 
         </span>
@@ -13,7 +13,7 @@
         <img src="../../../assets/IMG_20220828_132543_578.jpg" alt="barns">
         <ul class="navigation-list">
             <div class="login">
-                <a class="login-anchor" [routerLink]="['/login']" routerLinkActive="active">Login</a>
+                <a class="login-anchor" data-cy="login" [routerLink]="['/login']" routerLinkActive="active">Login</a>
                 <a  [routerLink]="['/register']" routerLinkActive="active">Register</a>
             </div>
     
