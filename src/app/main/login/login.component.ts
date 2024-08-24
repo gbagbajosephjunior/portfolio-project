@@ -27,9 +27,9 @@ customer = new Customer();
 
   populateTestData(){
 this.customerForm.setValue({
-  firstName: "Barns",
-  lastName: "Dooga",
-  email: "barnsdooga@gmail.com",
+  firstName: "Joseph",
+  lastName: "Gbagba",
+  email: "gbagbajosephjunior@gmail.com",
   message: 'employ me',
   password: 2222
 })
@@ -37,9 +37,9 @@ this.customerForm.setValue({
 
   populate(){
     this.customerForm.patchValue({
-      firstName: "Barns",
-      lastName: "Dooga",
-      email: "barnsdooga@gmail.com",
+      firstName: "Joseph",
+      lastName: "Gbagba",
+      email: "gbagbajosephjunior@gmail.com",
       message: 'employ me in your oragnization to bring my skills to maximize companys wealth',
     })
   }

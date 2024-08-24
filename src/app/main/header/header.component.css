@@ -122,7 +122,7 @@ width: 6rem;
 border-radius: 50%;
 background-position: top;
 background-size: contain;
-background-image: linear-gradient( rgba(17, 1, 77, 0.822), rgba(0, 0, 0, 0.993)), url('../../../assets/IMG_20220828_132543_578.jpg');
+background-image: linear-gradient( rgba(17, 1, 77, 0.822), rgba(0, 0, 0, 0.993)), url('../../../assets/author.jpg');
 transition: transform .8s;
 }
 
